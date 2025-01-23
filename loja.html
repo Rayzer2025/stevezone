@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SteveZone - Minecraft Survival / Version 1.8</title>
+    <title>SteveZone - Loja de Minecraft</title>
     <link rel="icon" href="https://www.favicon.cc/logo3d/445732.png">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <style>
-        @media (max-width: 768px) {
+          @media (max-width: 768px) {
     header {
         height: 60vh;
         padding: 20px;
@@ -240,65 +240,67 @@
             transform: scale(1.1);
         }
 
-        nav a i {
-            font-size: 18px;
-        }
-
-        .main-container {
-            padding: 20px 80px;
+        .plans-container {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 40px 20px;
         }
 
-        .ad-container {
-            margin: 20px auto;
-            padding: 20px;
-            border-radius: 8px;
-            color: #fff;
-            max-width: 800px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        .plan {
             background-color: #2c2c3e;
-            border: 1px solid #444;
-        }
-
-        .blog-box {
-            margin: 20px auto;
-            padding: 25px;
+            border: 2px solid #333;
             border-radius: 10px;
-            max-width: 800px;
-            max-height: 550px;
-            background-color: #1c1c2e;
-            border: 1px solid #555;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-            text-align: left;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            text-align: center;
+            width: 100%;
+            max-width: 300px;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .blog-box h2 {
-            font-size: 28px;
-            margin-bottom: 15px;
-            font-weight: bold;
+        .plan:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.4);
         }
 
-        .blog-box p {
+        .plan img {
+            width: 100%;
+            max-width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .plan h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .plan p {
             font-size: 16px;
-            line-height: 1.6;
+            margin-bottom: 20px;
         }
 
-        .social-embeds {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
+        .plan .price {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
         }
 
-        .social-embeds iframe {
-            margin: 20px auto;
-            display: block;
+        .plan button {
+            background-color: #4c90ff;
+            color: #ffffff;
             border: none;
-            width: 90%;
-            max-width: 600px;
-            height: 400px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .plan button:hover {
+            background-color: #255e68;
         }
 
         footer {
@@ -338,6 +340,7 @@
             margin-top: 15px;
             font-size: 13px;
         }
+
     </style>
 </head>
 <body>
@@ -354,21 +357,6 @@
         </div>
     </header>
 
-    <script>
-        function copyToClipboard() {
-            const ip = "stevezone.servegame.com";
-            navigator.clipboard.writeText(ip).then(() => {
-                const message = document.getElementById("copy-message");
-                message.style.opacity = "1";
-                setTimeout(() => {
-                    message.style.opacity = "0";
-                }, 2000);
-            }).catch(err => {
-                console.error("Erro ao copiar IP: ", err);
-            });
-        }
-    </script>
-
     <nav class="text-center">
         <a href="index.html"><i class="bi bi-house-fill"></i> Início</a>
         <a href="loja.html"><i class="bi bi-cart-fill"></i> Loja</a>
@@ -377,88 +365,104 @@
         <a href="#" data-bs-toggle="modal" data-bs-target="#tlauncherModal"><i class="bi bi-download"></i> TLauncher</a>
     </nav>
 
-    <div class="main-container">
-
-        <div class="blog-box">
-            <h2>A Criação de SteveZone</h2>
-            <p>
-                Ao chegar em SteveZone, Rayzer encontrou vastas planícies, densas florestas, montanhas imponentes e rios serpenteantes que cortavam o mundo, mas algo estava faltando. A terra precisava ser cultivada, as vilas precisavam ser fundadas, e a terra precisava ser protegida de invasores. Rayzer sabia que, para criar o futuro de SteveZone, ele precisaria da ajuda de muitos outros.
-                Foi então que, com a magia do portal, ele convocou jogadores de todo o mundo para se unir a ele. Os primeiros aventureiros chegaram ao mundo e logo começaram a trabalhar juntos, estabelecendo seus lares, criando alianças e enfrentando as primeiras dificuldades que o mundo de SteveZone apresentava.
-                Porém, o que muitos não sabiam era que SteveZone não era apenas um mundo de beleza e recursos naturais. Havia algo mais profundo e sombrio por trás de sua criação, algo que Rayzer não tinha previsto. Em suas viagens pelo multiverso, ele havia acidentalmente libertado forças antigas que estavam presas na terra. Essas forças, invisíveis aos olhos humanos, começaram a interferir no mundo, criando distúrbios e desequilíbrios em toda a SteveZone</p>
+    <div class="plans-container">
+        <div class="plan">
+            <img src="https://p.novaskin.me/4700650275864576.png?class=thumbnail" alt="Plano 1" style="width: 20%;">
+            <h1>VIP Básico - R$ 20,00</h1>
+            <p><strong>Prefixo:</strong> [VIP] no chat.</p>
+            <p><strong>Kit de boas-vindas:</strong> Espada, picareta e machado de ferro encantados, poções de regeneração e força, 10 pães, 5 poções de regeneração, 3 poções de força, 1 baú de Ender.</p>
+            <p><strong>Acessos:</strong> Comando /home (2 casas), comando /warp VIP (áreas exclusivas), comando /sell (venda de itens com bônus).</p>
+            <p><strong>Benefícios:</strong> Redução de danos (5% contra mobs), área protegida (25x25 blocos), 1 espada de ouro para PvP, 1 poção de velocidade II, comando /kit materiais (diamantes, esmeraldas e ferro semanalmente).</p>
+            <a href="https://pag.ae/7_iVJRdX5" target="_blank">
+                <button>R$ 20 - Comprar</button>
+            </a>
         </div>
 
-       <div class="social-embeds" style="display: flex; justify-content: center; gap: 10px;">
-    <!-- Twitter Embed -->
-    <a class='twitter-timeline' data-width='300' data-height='400'
-       href='https://twitter.com/SteveZoneMC?ref_src=twsrc%5Etfw'>Twitter SteveZoneMC</a>
-    <script async src='https://platform.twitter.com/widgets.js' charset='utf-8'></script>
+        <div class="plan">
+            <img src="https://p.novaskin.me/4259063121.png?class=thumbnail" alt="Plano 2" style="width: 20%;">
+            <h1>VIP Premium - R$ 40,00</h1>
+            <p><strong>Prefixo:</strong> [VIP PREMIUM] no chat.</p>
+            <p><strong>Kit de boas-vindas:</strong> Picareta, espada e armadura de diamante encantados, poções de regeneração e força, 10 pães, 5 bifes cozidos, 1 elmo de Netherite.</p>
+            <p><strong>Acessos:</strong> Comando /home (5 casas), comando /warp VIP (áreas exclusivas), comando /fly (voo em áreas protegidas), comando /fix (reparação de itens encantados).</p>
+            <p><strong>Benefícios:</strong> Redução de danos (10% contra mobs, 15% em PvP), área protegida (50x50 blocos), acesso à loja VIP, 1 kit de exploração (poções, canoa, lava, obsidian), comando /tpa (teleporte entre jogadores), comando /kit raridade (diamantes, esmeraldas, ouro e carvão semanalmente).</p>
+            <a href="https://pag.ae/7_iVK85zn" target="_blank">
+                <button>R$ 40 - Comprar</button>
+            </a>
+        </div>
 
-    <!-- Discord Embed -->
-    <iframe src="https://discordapp.com/widget?id=1326036061432053781&theme=dark" 
-            width="300" height="400" allowtransparency="true" frameborder="0" 
-            sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
-</div>
+        <div class="plan">
+            <img src="https://p.novaskin.me/5861953989771264.png?class=thumbnail" alt="Plano 3" style="width: 20%;">
+            <h1>Desban do Servidor</h1>
+            <p><strong>Benefícios:</strong></p>
+            <p>Desbanimento completo de conta no servidor.</p>
+            <p>Recuperação de acesso a todas as áreas e recursos.</p>
+            <p>Sem penalidades futuras relacionadas ao banimento anterior.</p>
+            <p><strong>Preço:</strong></p>
+            <p class="price">R$ 50,00</p>
+            <a href="https://pag.ae/7_iVKt6HM" target="_blank">
+                <button>R$ 15 - Desbanir Agora</button>
+            </a>
+        </div>
     </div>
 
-<!-- Modal Reportar Bugs -->
-<div class="modal fade" id="reportBugModal" tabindex="-1" aria-labelledby="reportBugModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="reportBugModalLabel" style="color: black;">Reporte de Bugs - SteveZone</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" style="color: black;">
-                <p>Em <strong>SteveZone</strong>, estamos sempre trabalhando para melhorar a experiência dos nossos jogadores. Caso você encontre um bug ou erro durante o jogo, sua ajuda será essencial para corrigirmos rapidamente e garantirmos um ambiente divertido e sem problemas para todos!</p>
+    <!-- Modal Reportar Bugs -->
+    <div class="modal fade" id="reportBugModal" tabindex="-1" aria-labelledby="reportBugModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="reportBugModalLabel" style="color: black;">Reporte de Bugs - SteveZone</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="color: black;">
+                    <p>Em <strong>SteveZone</strong>, estamos sempre trabalhando para melhorar a experiência dos nossos jogadores. Caso você encontre um bug ou erro durante o jogo, sua ajuda será essencial para corrigirmos rapidamente e garantirmos um ambiente divertido e sem problemas para todos!</p>
 
-                <h6>Como Reportar Bugs por E-mail</h6>
-                <p>Siga estas etapas simples para nos reportar qualquer problema diretamente pelo e-mail <strong>stevezonemc@gmail.com</strong>:</p>
+                    <h6>Como Reportar Bugs por E-mail</h6>
+                    <p>Siga estas etapas simples para nos reportar qualquer problema diretamente pelo e-mail <strong>stevezonemc@gmail.com</strong>:</p>
 
-                <h6><strong>Passo 1: Descreva o Bug Detalhadamente</strong></h6>
-                <ul>
-                    <li><strong>O que aconteceu?</strong> Explique a situação ou ação que causou o erro.</li>
-                    <li><strong>Detalhes técnicos:</strong> Qual comando você utilizou? Onde estava no mapa? O que aconteceu imediatamente antes?</li>
-                    <li><strong>Evidências:</strong> Se possível, envie prints ou vídeos para ajudar nossa equipe a entender melhor o problema.</li>
-                </ul>
+                    <h6><strong>Passo 1: Descreva o Bug Detalhadamente</strong></h6>
+                    <ul>
+                        <li><strong>O que aconteceu?</strong> Explique a situação ou ação que causou o erro.</li>
+                        <li><strong>Detalhes técnicos:</strong> Qual comando você utilizou? Onde estava no mapa? O que aconteceu imediatamente antes?</li>
+                        <li><strong>Evidências:</strong> Se possível, envie prints ou vídeos para ajudar nossa equipe a entender melhor o problema.</li>
+                    </ul>
 
-                <h6><strong>Passo 2: Inclua Informações Importantes</strong></h6>
-                <ul>
-                    <li><strong>Seu nome de usuário no servidor (Minecraft):</strong> Isso nos ajudará a identificar seu caso rapidamente.</li>
-                    <li><strong>Data e hora aproximada:</strong> Ajuda nossa equipe a localizar o erro exato nos registros.</li>
-                    <li><strong>Versão do Minecraft:</strong> Lembre-se de que o servidor SteveZone funciona na versão 1.8, então outras versões podem apresentar comportamentos inesperados.</li>
-                </ul>
+                    <h6><strong>Passo 2: Inclua Informações Importantes</strong></h6>
+                    <ul>
+                        <li><strong>Seu nome de usuário no servidor (Minecraft):</strong> Isso nos ajudará a identificar seu caso rapidamente.</li>
+                        <li><strong>Data e hora aproximada:</strong> Ajuda nossa equipe a localizar o erro exato nos registros.</li>
+                        <li><strong>Versão do Minecraft:</strong> Lembre-se de que o servidor SteveZone funciona na versão 1.8, então outras versões podem apresentar comportamentos inesperados.</li>
+                    </ul>
 
-                <h6><strong>Passo 3: Envie o E-mail</strong></h6>
-                <p>Após reunir as informações, envie um e-mail para <strong>stevezonemc@gmail.com</strong>, usando o assunto:</p>
-                <p><em>"Relatório de Bug - [Descrição do Bug]"</em></p>
-                <p>Isso ajuda nossa equipe a priorizar seu relato e agilizar a correção!</p>
+                    <h6><strong>Passo 3: Envie o E-mail</strong></h6>
+                    <p>Após reunir as informações, envie um e-mail para <strong>stevezonemc@gmail.com</strong>, usando o assunto:</p>
+                    <p><em>"Relatório de Bug - [Descrição do Bug]"</em></p>
+                    <p>Isso ajuda nossa equipe a priorizar seu relato e agilizar a correção!</p>
 
-                <h6>Exemplo de E-mail</h6>
-                <p><strong>Assunto:</strong> Relatório de Bug - Problema com Comando /home</p>
-                <p><strong>Mensagem:</strong></p>
-                <blockquote style="border-left: 4px solid #ccc; padding-left: 10px;">
-                    Olá, equipe do SteveZone!<br><br>
-                    Estou reportando um bug que encontrei enquanto jogava no servidor. Tentei usar o comando <em>/home</em> para voltar à minha base, mas recebi a mensagem de erro: <em>"Você não tem uma casa registrada."</em> Isso aconteceu no dia 22/01/2025, por volta das 19:30 (horário do servidor).<br><br>
-                    Meu nome de usuário no servidor é <strong>Jogador123</strong>, estou jogando na versão <strong>1.8 do Minecraft</strong>. Já tentei novamente em outros momentos, mas o erro persiste.<br><br>
-                    Em anexo, estou enviando uma captura de tela com a mensagem de erro.<br><br>
-                    Agradeço pela atenção! 😊
-                </blockquote>
+                    <h6>Exemplo de E-mail</h6>
+                    <p><strong>Assunto:</strong> Relatório de Bug - Problema com Comando /home</p>
+                    <p><strong>Mensagem:</strong></p>
+                    <blockquote style="border-left: 4px solid #ccc; padding-left: 10px;">
+                        Olá, equipe do SteveZone!<br><br>
+                        Estou reportando um bug que encontrei enquanto jogava no servidor. Tentei usar o comando <em>/home</em> para voltar à minha base, mas recebi a mensagem de erro: <em>"Você não tem uma casa registrada."</em> Isso aconteceu no dia 22/01/2025, por volta das 19:30 (horário do servidor).<br><br>
+                        Meu nome de usuário no servidor é <strong>Jogador123</strong>, estou jogando na versão <strong>1.8 do Minecraft</strong>. Já tentei novamente em outros momentos, mas o erro persiste.<br><br>
+                        Em anexo, estou enviando uma captura de tela com a mensagem de erro.<br><br>
+                        Agradeço pela atenção! 😊
+                    </blockquote>
 
-                <h6>O que Acontece Após o Envio?</h6>
-                <p>Assim que recebermos seu e-mail, nossa equipe investigará o problema. Caso precisemos de mais informações, entraremos em contato. Quando o bug for corrigido, notificaremos você sobre a resolução.</p>
+                    <h6>O que Acontece Após o Envio?</h6>
+                    <p>Assim que recebermos seu e-mail, nossa equipe investigará o problema. Caso precisemos de mais informações, entraremos em contato. Quando o bug for corrigido, notificaremos você sobre a resolução.</p>
 
-                <p><strong>Obrigado por ajudar a melhorar o SteveZone!</strong></p>
-                <p>Reportar bugs é essencial para garantir que o servidor continue funcionando perfeitamente, proporcionando a melhor experiência possível para todos os jogadores. Se tiver dúvidas ou outros problemas, fale conosco pelo e-mail <strong>stevezonemc@gmail.com</strong>. Estamos aqui para ajudar!</p>
+                    <p><strong>Obrigado por ajudar a melhorar o SteveZone!</strong></p>
+                    <p>Reportar bugs é essencial para garantir que o servidor continue funcionando perfeitamente, proporcionando a melhor experiência possível para todos os jogadores. Se tiver dúvidas ou outros problemas, fale conosco pelo e-mail <strong>stevezonemc@gmail.com</strong>. Estamos aqui para ajudar!</p>
 
-                <p>Divirta-se no SteveZone e boa sorte em sua jornada!</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                    <p>Divirta-se no SteveZone e boa sorte em sua jornada!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
 
     <!-- Modal TLauncher -->
     <div class="modal fade" id="tlauncherModal" tabindex="-1" aria-labelledby="tlauncherModalLabel" aria-hidden="true">
@@ -491,7 +495,7 @@
                         <li>Preencha os campos:
                             <ul>
                                 <li><strong>Nome do servidor:</strong> SteveZone</li>
-                                <li><strong>Endereço do servidor:</strong> (insira o IP fornecido, ex: stevezone.server.com)</li>
+                                <li><strong>Endereço do servidor:</strong> (insira o IP fornecido, ex: stevezone.servegame.com)</li>
                                 <li><strong>Porta:</strong> 25565 (ou outra especificada pelo servidor).</li>
                             </ul>
                         </li>
@@ -513,7 +517,7 @@
             </div>
         </div>
     </div>
-        <!-- Rodapé -->
+    <!-- Rodapé -->
     <footer>
         <div class="contacts">
             <a href="#"><i class="bi bi-telephone-fill"></i> +55 11 1234-5678</a>
@@ -522,5 +526,20 @@
         </div>
         <p>&copy; 2025 Loja de Minecraft | Desde 2022 | Todos os direitos reservados. <br> Desenvolvido por <strong>W</strong>.</p>
     </footer>
+
+    <script>
+        function copyToClipboard() {
+            const ip = "stevezone.servegame.com";
+            navigator.clipboard.writeText(ip).then(() => {
+                const message = document.getElementById("copy-message");
+                message.style.opacity = "1";
+                setTimeout(() => {
+                    message.style.opacity = "0";
+                }, 2000);
+            }).catch(err => {
+                console.error("Erro ao copiar IP: ", err);
+            });
+        }
+    </script>
 </body>
 </html>
